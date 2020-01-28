@@ -1,0 +1,42 @@
+
+<!-- <div class="bp-preloader-wrap">
+  <div class="percentage">
+     <div class="glow"></div>
+      <div class="percentage-number" >
+        <span class="loader-title">Loading your data... </span>
+        <span id="precent"></span>
+    </div>
+  </div>
+   <div class="loader">
+    <img src="https://static.thenounproject.com/png/9594-200.png" class="light-bolt" />
+    <div class="trackbar">
+      <div class="loadbar"></div>
+    </div>
+  </div> 
+</div> -->
+<app-heder-page></app-heder-page>
+<div id = "BP_Home_mainContainer" class = "mainSectionView" ng-class = "{'bp-hideMobileView'  : loadHtmlViewBasedOnCurrentState()}">
+  <div class="fadein viewA" ui-view="a" autoscroll='false'>
+    <router-outlet></router-outlet>
+
+  </div>
+  <div class="fadein" ui-view="b" autoscroll='false'></div>
+</div>
+<div class = "mobileSectionView" ng-class = "{'bp-showMobileView' : loadHtmlViewBasedOnCurrentState()}">
+ <div class="content bp-wrapper-container customer-orderv2 cleaning-container">
+  <div class="container cleaning-page">
+      <div class="swipe_icon">
+          <i ng-include="'{!assets/Application_Images}/Icons/broom.svg'" class="white_FFF_NewCO"></i>
+      </div>
+      <div class="cleaning_text">
+          We are still cleaning up this page for mobile devices
+      </div>
+      <div class="cleaning_button">
+      
+          <!-- <button class = "bp-btn bp-btn-secondaryCTA bp-btn-small">BACK</button> -->
+           <a ui-sref="homePage" class="back_btn bp-btn bp-btn-secondaryCTA bp-btn-small">BACK</a> 
+      </div>
+  </div>
+</div>
+<!-- </ul> -->
+

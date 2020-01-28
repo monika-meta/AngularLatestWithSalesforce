@@ -1,0 +1,58 @@
+
+<apex:page showheader="false" sidebar="false" standardStylesheets="false" controller="NewHomePageCtrl" extensions="NewHomePageCtrl" >
+<head>
+  <meta charset="utf-8">
+  <title>AngularLatestWithSalesforce</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="{!URLFOR($Resource.sftestassets, 'favicon.ico')}">
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    g_sf_api_wrapper_contact = null;
+    g_sf_api_wrapper_account = null;
+    g_sf_api_wrapper_homepage = null;
+
+
+    if (typeof NewHomePageCtrl !== 'undefined') {
+      g_sf_api_wrapper_account = NewHomePageCtrl;
+    }
+    if (typeof NewHomePageCtrl !== 'undefined') {
+      g_sf_api_wrapper_contact = NewHomePageCtrl;
+    }
+    if (typeof NewHomePageCtrl !== 'undefined') {
+      g_sf_api_wrapper_homepage = NewHomePageCtrl;
+    }
+    g_sf_page_root = '';
+    if (typeof 'apex/sftestpage' !== 'undefined') {
+      g_sf_page_root = 'apex/sftestpage';
+    }
+    g_sf_static_root = "{!URLFOR($Resource.sftestassets, 'favicon.ico')}"
+    if (!(g_sf_static_root[0] === "{")) { //in local mode this will not have been replaced
+      g_sf_static_root = g_sf_static_root.substr(0, g_sf_static_root.lastIndexOf('/')) + '/';
+    } else {
+      g_sf_static_root = "";
+    }
+    
+    function getSfStaticResourceRoot() {
+        return g_sf_static_root;
+    }
+
+    function getSfPageRoot() {
+      return g_sf_page_root;
+    }
+
+
+    function getSfApiWrapperAccount() {
+      return g_sf_api_wrapper_account;
+    }
+    function getSfApiWrapperContact() {
+      return g_sf_api_wrapper_contact;
+    }
+    function getSfApiWrapperHomePage() {
+      return g_sf_api_wrapper_homepage;
+    }
+</script>
+<script src="{!URLFOR($Resource.sftestassets, 'runtime.js')}" type="module"></script><script src="{!URLFOR($Resource.sftestassets, 'polyfills.js')}" type="module"></script><script src="{!URLFOR($Resource.sftestassets, 'styles.js')}" type="module"></script><script src="{!URLFOR($Resource.sftestassets, 'vendor.js')}" type="module"></script><script src="{!URLFOR($Resource.sftestassets, 'main.js')}" type="module"></script></body>
+</apex:page>

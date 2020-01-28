@@ -1,0 +1,8 @@
+<svg id="Light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path fill="none"  d="M3.5,11.323v10.5a.5.5,0,0,0,.5.5h7"/>
+  <path fill="none"  d="M.5,10.823,11.326.939a1,1,0,0,1,1.348,0L23.5,10.823"/>
+  <circle fill="none"  cx="17.5" cy="17.323" r="6"/>
+  <line fill="none"  x1="20" y1="14.823" x2="15" y2="19.823"/>
+  <path fill="none"  d="M16,14.823a.5.5,0,1,1-.5.5.5.5,0,0,1,.5-.5"/>
+  <path fill="none"  d="M19,18.823a.5.5,0,1,1-.5.5.5.5,0,0,1,.5-.5"/>
+</svg>
